@@ -3,6 +3,8 @@ print("Realizando analisis estadistico de Bitcoin")
 BTC = read.csv("cryptocurrencypricehistory/bitcoin_price.csv", header = TRUE)
 ETH = read.csv("cryptocurrencypricehistory/ethereum_price.csv", header = TRUE)
 
+pdf("pdf/analisis.pdf")
+
 #	Summary
 the_summarys <- function(data){
 	columns = c("Open","High","Low","Close")
@@ -14,8 +16,10 @@ the_summarys <- function(data){
 		print(sd(data[[columns[i]]]))
 	}
 }
+	sink("results/BitcoinSummary")
 	the_summarys(BTC)
-
+	print("Ethereum (ETH)")
+	the_summarys(ETH)
 
 
 	#Volume
