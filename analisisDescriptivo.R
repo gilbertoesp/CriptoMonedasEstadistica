@@ -47,6 +47,12 @@ the_summarys <- function(data){
 	plot(BTC[["Low"]][1:825], col="RED", main="BTC vs ETH", type="l", ylab="Price", xlab="Date")
 	lines(ETH[["Low"]][1:825], col="BLUE")
 
+# Dado que los valores de las cripto monedas tienden a subir, mantenerse asi en la moyria de los casos
+# un diagrama de caja entorpece la visualizacion de datos. Esto no quira la posibilidad de que alguna moneda,
+# cuyo precio se mantega en cierto intervalo, pueda ser apreciada correctamente con un bxoplot
+
+	boxplot(BTC[["Low"]])
+
 
 	#Low
 
