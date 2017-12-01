@@ -9,3 +9,9 @@ Algunas incognitas que se intentarán responder con el análisis son:
 ¿Los cambios de precio se dan con respecto a temporadas?
 
 Incluso pueden ser más con forme pase el tiempo y se tenga un panorama más claro.
+
+Bibliografia
+
+- Manipulacion de fechas 
+https://www.statmethods.net/input/dates.html
+https://stackoverflow.com/questions/17496358/r-help-converting-factor-to-date#17497251
