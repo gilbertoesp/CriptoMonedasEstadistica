@@ -1,42 +1,45 @@
 Estructura Documento
 
-1. Bitcoin
-	Criptomonedas
+1. Criptomonedas
 		mision vision
 		como funcionan
 			blockchain
-			centros cambiop
-			companias con bitcoin core
-				principales
-				mexico
-					centros de cambio
-					companias
-		mineros
-	Hisotria
-		satoshi
-			link articulo original
-		silk road
-		impacto en us gov
-		impactoo eventos (sociales, politicos, economicos) en btc
-		actualiadad
-			lider projecto
-			companias lideres
+			centros cambio
+            mineros
 
-	Usuario final
-		empresas que aceptan bitcoin como pago
-		como obtener un bitcoin
-		wallets
-			que son
-			como funcionan
-			ejemoplos
+    Bitcoin
+        Hisotria
+            Satoshi Nakamoto
+                link articulo original
+            silk road
+            impacto en us gov
+            Impacto de eventos (sociales, politicos, economicos) en btc
+            actualiadad
+                lider proyecto
+                companias lideres
 
-2. Bitcoin vs monedas clasicas
+        companias con bitcoin core
+            principales
+            mexico
+                centros de cambio
+                companias
+
+        Usuario final
+            empresas que aceptan bitcoin como pago
+            como obtener un bitcoin
+            wallets
+                que son
+                como funcionan
+                Ejemplos
+
+2. Criptomoneda vs monedas clasicas
 	Diferencias
 	quien "contrala" btc <-> usd
+        Como funciona
 	volatibilidad del valor
-	cambios de usd, afecto btc?
-	Porque BTC en lugar de clasicas?
-	
+	Afecta las crisis de baja de usd al precio de bitcoins?
+	Porque BTC en lugar de monedas clasicas?
+
 3. Analisis
 	BTC vs ETH vs BCH
 
@@ -45,22 +48,25 @@ Estructura Documento
 	punto de inflexion mas amplio
 
 	series de tiempo de las criptomonedas
-		overlapping month's mean
-	overlapping high and low
-	diferencias extremas entre bitcoin y las demas monadas
-	dependencia entre monedas
-		motnh'mean
-		all
-
-	cantidad de monedas vs precio
-		hipergeomtrica?
+        sobreponer la media de cada mes, anio
+    sobreponer el precio mas alto y bajo de los dias
+    Comparar bitcoin a las demas monedas
+        mostrar las diferencias extremas entre bitcoin y las demas monedas
+	hay dependencia entre el precio de las monedas?
+        probar usando la media mensual
+        probar usando la media global
 
 	cantidad de mondeas vs tiempo
-		hipergeometrica?
+		es una serie hipergeometrica?
 
-	tamano promedio de blockchain 
+	cantidad de monedas vs precio
+		hay dependencia?
+
+	tamano promedio de blockchain
 		vs cantidad de bitcoin
+            hay dependencia?
 		vs tiempo
+            aumenta o disminuye?
 
 	tiempo vs hash rate
 		dificultad
@@ -79,7 +85,12 @@ Estructura Documento
 
 
 
-X. Conclusiones 
+X. Conclusiones
+    Cómo es que el precio historico de las diferentes criptomonedas cambia en el tiempo?
+    Se puede predecir el precio de las criptomonedas?
+    Las criptomonedas son volatiles o estables?
+    Se relaciona la fluctiación de precio de una criptomoneda con otra?
+    Los cambios de precio se dan con respecto a temporadas?
 	predicciones de terceros de btc
 	predicciones propias
 
