@@ -1,0 +1,85 @@
+Estructura Documento
+
+1. Bitcoin
+	Criptomonedas
+		mision vision
+		como funcionan
+			blockchain
+			centros cambiop
+			companias con bitcoin core
+				principales
+				mexico
+					centros de cambio
+					companias
+		mineros
+	Hisotria
+		satoshi
+			link articulo original
+		silk road
+		impacto en us gov
+		impactoo eventos (sociales, politicos, economicos) en btc
+		actualiadad
+			lider projecto
+			companias lideres
+
+	Usuario final
+		empresas que aceptan bitcoin como pago
+		como obtener un bitcoin
+		wallets
+			que son
+			como funcionan
+			ejemoplos
+
+2. Bitcoin vs monedas clasicas
+	Diferencias
+	quien "contrala" btc <-> usd
+	volatibilidad del valor
+	cambios de usd, afecto btc?
+	Porque BTC en lugar de clasicas?
+	
+3. Analisis
+	BTC vs ETH vs BCH
+
+	precio mas bajo en bitcoin cada anio
+		este esta en el mismo intervalo de tiempo,
+	punto de inflexion mas amplio
+
+	series de tiempo de las criptomonedas
+		overlapping month's mean
+	overlapping high and low
+	diferencias extremas entre bitcoin y las demas monadas
+	dependencia entre monedas
+		motnh'mean
+		all
+
+	cantidad de monedas vs precio
+		hipergeomtrica?
+
+	cantidad de mondeas vs tiempo
+		hipergeometrica?
+
+	tamano promedio de blockchain 
+		vs cantidad de bitcoin
+		vs tiempo
+
+	tiempo vs hash rate
+		dificultad
+			dependecnia?
+
+	miners revenue vs tiempo
+		numero de mondeas
+		 dependecia?
+
+	costo por transaccion vs tiempo
+		vs numero de monedas
+			cuando fue mas conveniente ser minero?
+			ahora mismo es rehabituable ser minero?
+				predecir si lo sera en un futuro
+
+
+
+
+X. Conclusiones 
+	predicciones de terceros de btc
+	predicciones propias
+

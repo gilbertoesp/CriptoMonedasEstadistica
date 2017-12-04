@@ -1,3 +1,11 @@
+que es lo mas importante con critomonedas
+	blockchain
+	miners
+	ideal de btc
+		mision
+		vision
+	
+
 quien controla el intercambio de btc a usd y como
 diferencia entre btc y las divisas internacionales
 como obtener un bitcoin
@@ -34,6 +42,15 @@ entrevista con usuario activo de btc
 	no temes que la burbuja explote
 	es posible que btc llegue reemplaze a las clasicas
 	como te enteraste de los bitcoin
+
+como ser un usuario de bitcoion
+
+walllets
+	que son
+	como funcionan
+	cuantas hay
+	que carajos
+
 
 pq elegir criptomonedas en lugar de moneda clasica
 btc vs criptomonedas
