@@ -6,6 +6,13 @@ reverseRowDataFrame <- function(dataFrame)
     return( dataFrame[nrow(dataFrame):1, ] )
 }
 
+readCsv <- function(path)
+{
+    dato = read.csv(paste0("../csv/", path, ".csv"))
+    dato[["Date"]] = as.Date(dato[["Date"]], format = "%b %d, %Y")
+    return( reverseRowDataFrame(dato) )
+}
+
 #Plotea dos columnas de un data frame por mes a traves del periodo de años especificado y lo pone en el pdf con el nombre especificado
 #Datos es un data frame
 #col1 es una de las columnas a plotear
@@ -126,24 +133,24 @@ compareTwoColMonth <- function(datos, col1, col2, years)
     print(paste("Min month:", minMonth))
 }
 
+subset_date <- function(data,date_1, date_2){
+	# Funcion que regresa el subconjunto de datos que esta entre este intervalo
+	# 	date_1 se incluye en el set, date_2 no
+	set <- subset(data, subset = ( date_1 <= data$Date & date_2 >data$Date) )
+	return(set)	
+}
+
 #Obtiene el porcentaje que aumenta el precio de una moneda desde que el dia comienza hasta que el dia acaba
-getPercentRaiseDay(datos)
+getPercentRaiseDay <- function(datos)
 {
     raise = 0
 
     for( i in 1:nrow(datos)){
-        raise += datos[i, "Close"] - datos[i, "Open"]
+        raise = raise + datos[i, "Close"] - datos[i, "Open"]
     }
 
     return(raise / 100)
 }
 
-#Regresa un subconjunto de los datos recibidos con fecha recibida.
-#La fecha puede ser un anio, un mes, un dia o una fecha en particular
-#Se usa grep para buscarlo por lo que depende de como este escrita la fecha en los datos
-getRowsWithDate(datos, date)
-{
-    return( [ grep(toString(year), datos$Date), ] )
-}
 
 
