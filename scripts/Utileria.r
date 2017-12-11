@@ -6,6 +6,13 @@ reverseRowDataFrame <- function(dataFrame)
     return( dataFrame[nrow(dataFrame):1, ] )
 }
 
+readCsv <- function(path)
+{
+    dato = read.csv(paste0("../csv/", path, ".csv"))
+    dato[["Date"]] = as.Date(dato[["Date"]], format = "%b %d, %Y")
+    return( reverseRowDataFrame(dato) )
+}
+
 #Plotea dos columnas de un data frame por mes a traves del periodo de años especificado y lo pone en el pdf con el nombre especificado
 #Datos es un data frame
 #col1 es una de las columnas a plotear
@@ -84,3 +91,66 @@ closingHighAnalysis <- function(datos)
     perc = nrow(clhi) / nrow(datos) * 100
     print(paste("Percentage of times the closing price is the highest:", toString(perc)))
 }
+
+#Revisa la mayor diferencia en valor absoluto por mes del valor de la media de dos valores de un
+#data frame y encuentra el maximo y minimo de estas diferencias
+compareTwoColMonth <- function(datos, col1, col2, years)
+{
+    months = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+   
+    maxdif = 0
+    mindif = 9999999
+    for(year in years){
+
+        yearDF = datos[ grep(toString(year), datos$Date), ]
+
+        for(month in months){
+            monthDF = yearDF[ grep(month, yearDF$Date), ]
+
+            if(nrow(monthDF) > 0){ #Si mes o anio no existe, abrian 0 renglones. Este if los evita
+                meandif = abs( mean(monthDF[[col1]]) - mean(monthDF[[col2]]) )
+                if(meandif > maxdif && !(year == 2017 && month == "Nov")){
+                    maxdif = meandif
+                    maxYear = year
+                    maxMonth = month
+                }
+                if(meandif < mindif){
+                    mindif = meandif
+                    minYear = year
+                    minMonth = month
+                }
+            }
+        }
+        
+    }
+
+    print(paste("Max:", maxdif))
+    print(paste("Max year:", maxYear))
+    print(paste("Max month:", maxMonth))
+
+    print(paste("Min:", mindif))
+    print(paste("min Year:", minYear))
+    print(paste("Min month:", minMonth))
+}
+
+subset_date <- function(data,date_1, date_2){
+	# Funcion que regresa el subconjunto de datos que esta entre este intervalo
+	# 	date_1 se incluye en el set, date_2 no
+	set <- subset(data, subset = ( date_1 <= data$Date & date_2 >data$Date) )
+	return(set)	
+}
+
+#Obtiene el porcentaje que aumenta el precio de una moneda desde que el dia comienza hasta que el dia acaba
+getPercentRaiseDay <- function(datos)
+{
+    raise = 0
+
+    for( i in 1:nrow(datos)){
+        raise = raise + datos[i, "Close"] - datos[i, "Open"]
+    }
+
+    return(raise / 100)
+}
+
+
+
