@@ -67,6 +67,99 @@
     \subsection*{Porque elegir usar Bitcoins en lugar de monedas clasicas}
 
 \section*{Analisis BTC vs ETH vs BCH}
+
+    cor() es una funcion que prueba correlacion entre datos
+
+    \subsection*{Bitcoin}
+
+    \subsubsection*{Precio con el que abre y precio con el que cierra}
+
+    Haciendo primeramente un analisis visual, en general no se muestra una gran diferencia entre el precio con el que se abre y con el que se cierra el día con bitcoin. La diferencia de las medias es de solo 4 dolares que cierra mas el bitcoin en promedio durante toda su vida que con lo que abre.
+    
+    [INSERTAR_GRAFICO_GLOBAL] 
+    
+    Entonces, quiza ver la diferencia por meses nos de una mejor idea de como los datos se puedan realacionar.
+    Ciertamente al menos ahora se puede ver que hay diferencias entre los precios en los que se abre y en los que se cierra.
+
+    Después de ver por meses, se puede apreciar mejor las diferencias que hay:
+
+    [INSERTAR_GRAFICOS_DIFERENCIAS]
+
+
+    Por curiosidad, revisamos que tan seguido el precio máximo o mínimo era durante los periodos de apertura o cierre del día para las monedas monedas y todas se mantienen por debajo del 10\%.
+
+    Para el Bitcoin, la más alta es el precio de apertura con el precio más bajo en el día, 7\% de las veces con 116 días y el más bajo fue cuando el precio con el que cierra es el más bajo, con solo 1.7\% que fueron 28 días.
+
+    Para el Bitcoin, esto solo representa poco más del 15\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
+
+
+
+    Similarmente para el Ethereum, la más alta es el precio de apertura con el precio más bajo en el día, 5.9\% de las veces con 49 días y el más bajo fue cuando el precio con el que cierra es el más bajo, con solo 2.7\% que fueron 22 días.
+
+    Para el Ethereum, esto solo representa poco más del 18\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
+
+
+
+    Finalmente para Bitcoin cash, el valor más alto es un 6.5\%, que para Bitcoin cash son 7 días, en el precio más bajo es el que cierra. El porcentaje más bajo es de 0.92\% ,o un día, en el que el precio más alto es con el que se cierra.
+    
+    Para Bitcoin Cash, esto solo representa menos del 18\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
+
+
+    \subsubsection*{¿Es el número de Bitcoins representado por una función hipergeometrica?}
+
+    En el árticulo original, Satoshi Nakamoto afirma que el número de Bitcoins está dado por una función Hipergeometrica y que gracias a esto, el número de Bitcoins que pueden ser minadas es finito.
+    Veremos si esta afirmación es correcta o el autor mintió.
+
+    Para ello veremos si el número de monedas en el tiempo se ajusta a una función hipergeometrica, y si es, con que parametros.
+
+    [INSERTAR_GRAFICO_NUM_BTC_EN_TIEMPO]
+
+    [HACER_PRUEBA_DE_AJUSTE]
+
+    \subsubsection*{Cantidad de monedas y precio}
+
+    Con un poco de conocimiento de economía, se puede relacionar la cantidad de monedas en un mercado con el precio que estas tienen. Entonces es de interes revisar si las criptomonedas cumplen con esto, es decir, si se puede ver dependencia entre la cantidad de criptomonedas y su precio.
+
+    \subsubsection*{Blockchain}
+
+    Como fue discutido al inicio, el protocolo Blockchain es lo que permitio que las criptomonedas existieran por haber solucionado el problema del gasto doble por lo que es de especial interes analizarlo al menos un poco, especificamente el tamaño del Blockchain ya que es uno de los datos que se tienen.
+
+    Revisaremos si el tamaño del Blockchain y la cantidad de bitcoins son dependientes y si aumenta o disminuye con el tiempo.
+
+    \subsubsection*{Hash rate}
+
+    Hash rate (o taza de hasheo) se refiere a que tan poderosa puede ser una maquina de un minero de criptomonedas, especificamente se refiere al número de veces que una función hash es calculada por segundo. Las ganancias que un minero espera son directamente proporcionales al hash rate.
+
+    El como se relaciona el hash rate con el tiempo puede ser de interes porque se podria ver como avanza el número de calculos que los mineros deben de realizar con las monedas a través del tiempo.
+
+    [INSERTAR_GRAFICO_HASH_RATE_TIEMPO]
+
+    [INSERTAR_CONCLUSIONES]
+
+   Otro dato que se tiene del Bitcoin es la dificultad relativa de que tan difícil es encontrar un nuevo bloque. Debido a lo que es el hash rate, en primera instancia suena a que tiene que estar relacionado con la dificultad así que haremos una prueba de independencia entre estos datos. 
+
+   \subsubsection*{Ingreso de los mineros}
+
+    Actualmente a mucha gente le interesa minar Bitcoins debido a las ganancias que puede tener por lo que ver como ha cambiado el ingreso de los mineros puede ser interesante.
+
+    [INSERTAR_MINER_REVENUE_VS_TIEMPO]
+
+    Individualmente a cada minero le interesa su ingreso así que ver de que puede depender es importante para estos. ¿Depende del número de monedas? Veamos:
+
+    [INSERTAR_MINER_REVENUE_VS_NUMERO_MONEDAS]
+
+    [HACER_PRUEBA_DEPENDENCIA]
+    
+    Entonces podriamos responder la pregunta, ¿Cuándo fue más rehabituable ser un minero?
+
+    [ANALIZAR_CUANDO_FUE_MAS_REHABITUABLE]
+
+
+
+
+
+
+
     La principal accion que realizaremos en el analisis es probar correlacion entre los datos y ver si es significativa la informacion que encontremos.
     \\
     Para ayudarnos, tambien interpretaremos graficos de los datos.
@@ -86,31 +179,6 @@
         probar usando la media mensual
         probar usando la media global
 
-    cantidad de mondeas vs tiempo
-        es una serie hipergeometrica?
-
-    cantidad de monedas vs precio
-        hay dependencia?
-
-    tamano promedio de blockchain
-        vs cantidad de bitcoin
-            hay dependencia?
-        vs tiempo
-            aumenta o disminuye?
-
-    tiempo vs hash rate
-        dificultad
-            dependecnia?
-
-    miners revenue vs tiempo
-        numero de mondeas
-         dependecia?
-
-    costo por transaccion vs tiempo
-        vs numero de monedas
-            cuando fue mas conveniente ser minero?
-            ahora mismo es rehabituable ser minero?
-                predecir si lo sera en un futuro
 
 \section*{Conclusiones}
 
