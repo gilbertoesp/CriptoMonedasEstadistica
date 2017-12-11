@@ -29,9 +29,9 @@ set_2015 <- subset_date(BTC, "2015-01-01", "2016-01-01")
 # Plotting el subset
 # Este proceso no puede ser impletando en una funcion dado que no existe Low high, definidos
 # fuera del contexto que estas manipulando los frames
-ggplot(data=set_2015, aes(Date, High)) + geom_line()
+#		->>>	ggplot(data=set_2015, aes(Date, High))  + geom_line()
 #plot_date(BTC, BTC$Low, "2015-01-01","2016-01-01")
 #plot_date(BTC, High, "2015-01-01","2016-01-01")
 #plot_date(BTC, Open, "2015-01-01","2016-01-01")
 #plot_date(BTC, Close, "2015-01-01","2016-01-01")
-
+ggplot(set_2015, aes(Date)) + geom_line(aes(y = High, color="GREEN")) + geom_line(aes(y = Low, color="RED")) + scale_color_manual(labels=c("High", "Low"),values=c("RED","BLUE"))
