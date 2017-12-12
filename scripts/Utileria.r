@@ -218,3 +218,33 @@ diferenciasHighLow_set <- function(data,date_1,date_2){
     Differences <- set$High - set$Low
     return(data.frame(Date, Differences))
 }
+
+
+#Funcion que encuentra el valor maximo y el valor minimo entre las diferencias en valor absoluto de dos columnas en un data frame. En el caso del maximo indica si viene de una
+#diferencia positiva o negativa
+getMaxMinDifference <- function(datos, col1, col2)
+{
+    maxdif = datos[[1, col1]] - datos[[1, col2]]
+    maxdate = datos[[1, "Date"]]
+    mindif = abs(maxdif)
+    mindate = maxdate
+
+    for(i in 2:nrow(datos)){
+        diff = datos[[i, col1]] - datos[[i, col2]]
+        if(abs(diff) > abs(maxdif)){
+            maxdif = diff
+            maxdate = datos[[i, "Date"]]
+        }
+        if(abs(diff) < mindif){
+            mindif = abs(diff)
+            mindate = datos[[i, "Date"]]
+        }
+    }
+    
+    print(paste("The max difference:", maxdif))
+    print(paste("The date of the max difference:", maxdate))
+
+    print(paste("The min difference:", mindif))
+    print(paste("The date of the min difference:", mindate))
+}
+

@@ -47,7 +47,7 @@
 Se considera que lo \'unico que respalda el precio de un Bitcoin es el n\'umero de transacciones de esta en el Blockchain. Otra forma de ver esto es que entre m\'as transacciones ha tenido una moneda, m\'as valiosa se hace debido a que se ha usado m\'as poder de computo, prueba de trabajo.
     \\
 		
-    Despu\'es de la creaci\'on del Blockchain se a\~nade el primer bloque (bloque Genesis) al cual se agregan bloques a la cadena despu\'es de haber resuelto un problema matem\'atico dif\'icil (criptogr\'aficamente hablando) y con cada bloque agregado, se recompenza a quien resolvi\'o el problema con cierto n\'umero de Bitcoins.
+    Despu\'es de la creaci\'on del Blockchain se a\~nade el primer bloque (bloque Genesis) al cual se agregan bloques a la cadena despu\'es de haber resuelto un problema matem\'atico dif\'icil (criptogr\'aficamente hablando) y con cada bloque agregado, se recompensa a quien resolvi\'o el problema con cierto n\'umero de Bitcoins.
 
     \subsubsection*{Transacci\'on}
 
@@ -198,14 +198,12 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
     \\
     
     %[INSERTAR_GRAFICO_GLOBAL] 
-    \includegraphics{btc/grafico_global}
+    \includegraphics{btc/diferencias_BTC_OpenClose}
 
     Ya que apenas se pueden notar visualmente debido a que visualmente una esta sobre la otra, pensamos que graficar las diferencias nos dar\'ia una mejor visualizaci\'on de los datos:
 
-    %[INSERTAR_GRAFICOS_DIFERENCIAS]
-    \includegraphics{btc/grafico_global_diff}
+    \includegraphics[width = 18cm, height = 10cm]{btc/diferencias_BTC_OpenClose}
 
-    
     Entonces, quiza ver la diferencia por meses nos de una mejor idea de como los datos se puedan realacionar.
     \\
 
@@ -213,14 +211,15 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
     \\
 
     %[Tabla de diferencia en meses]
-    \\
     \begin{itemize}
 
         \item En general Los precios con los que abre la moneda se ven menores comparados con los que cierra.
 
-        \item El mes en el que hubo menos cambio promedio entre la apertura y el cierre fue Septiembre de 2015 con 0.11 dolares.
+        \item El caso de menor cambio en un d\'ia fue el 18 de Mayo de 2013 donde el Bitcoin cerro con el mismo precio que con el que abri\'o.
 
-        \item El mes de mayor cambio es Noviembre de 2017 con 100.92 dolares, aunque es posible que la media este inflada porque son solo 8 días a diferencia de todos los demás meses. Ignorando ese mes, el siguiente es Octubre de 2017 con 68.7 dolares.
+        \item El caso en el que en un d\'ia el precio del Bitcoin perdi\'o m\'as valor de inicio al fin fue el 14 de Septiembre de 2017 con una perdida de 720.42 dolares.
+
+        \item El caso en el que en un d\'ia el precio del Bitcoin gan\'o m\'as valor de inicio al fin fue el 12 de Octubre de 2017 con una ganancia de 617.33 dolares.
 
     \end{itemize}
 
@@ -237,33 +236,57 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
 
     Entonces visualizar en unidades de tiempo m\'as peque\~nas podr\'ia mostrar m\'as de estos datos.
 
-    La diferencia m\'axima que hubo entre el precio m\'as alto y bajo fue de 308.35 dolares en Septiembre de 2017.
+    \begin{itemize}
 
-    La diferencia m\'inima fue de 4.61 dolares en Agosto de 2013.
+        \item El caso de menor cambio en un d\'ia fue el 18 de Mayo de 2013 donde el Bitcoin no cambi\'o de preci\'o ya que el valor m\'as alto y m\'as bajo de la moneda fue el mismo.
 
-    Entonces Bitcoin en un solo d\'ia cambio en 300 dolares su precio y diariamente cambia al menos 4 dolares.
+        \item El caso en el que en un d\'ia el precio del Bitcoin tuvo m\'as varianza fue el 15 de Septiembre de 2017 ya que la diferenc\'ia entre el valor m\'as alto y m\'as bajo es de 786.83 dolares.
 
+        \item Es interesante como la fecha con menor variaci\'on de alto y bajo concuerda con la fecha de menor variaci\'on del precio en que abre y cierra y que el d\'ia de mayor variaci\'on de alto y bajo est\'a a solo un d\'ia del de abertura y cierre.
+
+    \end{itemize}
+
+
+    **EN 2017 SE DIO UN AUMENTO DEL 600% DEL PRINCIPIO DEL ANIO
 
     ****En los ultimos meses (octubre, septiembre, noviembre), que porcentaje del precio aumenta bitcoin desde que inicia el dia hasta que acaba?
     
 
-    Por curiosidad, revisamos que tan seguido el precio máximo o mínimo era durante los periodos de apertura o cierre del día para las monedas monedas y todas se mantienen por debajo del 10\%.
+    Por curiosidad, revisamos que tan seguido el precio máximo o mínimo era durante los periodos de apertura o cierre del día para las monedas y encontramos que:
+    \begin{itemize}
 
-    Para el Bitcoin, la más alta es el precio de apertura con el precio más bajo en el día, 7\% de las veces con 116 días y el más bajo fue cuando el precio con el que cierra es el más bajo, con solo 1.7\% que fueron 28 días.
+        \item  todas se mantienen por debajo del 10\%.
 
-    Para el Bitcoin, esto solo representa poco más del 15\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
+        \begin{itemize}
 
+            \item Para el Bitcoin, la más alta es la relaci\'on del precio de apertura con el precio más bajo en el día, 7\% de las veces con 116 días.
+            
+            \item El más bajo fue cuando el precio con el que cierra es el más bajo, con solo 1.7\% que fueron 28 días.
 
+            \item Esto solo representa poco más del 15\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
 
-    Similarmente para el Ethereum, la más alta es el precio de apertura con el precio más bajo en el día, 5.9\% de las veces con 49 días y el más bajo fue cuando el precio con el que cierra es el más bajo, con solo 2.7\% que fueron 22 días.
+        \end{itemize}
 
-    Para el Ethereum, esto solo representa poco más del 18\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
+        \begin{itemize}
 
+            \item Similarmente para Ethereum, la más alta es el precio de apertura con el precio más bajo en el día, 5.9\% de las veces con 49 días.
+            
+            \item El más bajo fue cuando el precio con el que cierra es el más bajo, con solo 2.7\% que fueron 22 días.
 
+            \item Para el Ethereum, esto solo representa poco más del 18\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
 
-    Finalmente para Bitcoin cash, el valor más alto es un 6.5\%, que para Bitcoin cash son 7 días, en el precio más bajo es el que cierra. El porcentaje más bajo es de 0.92\% ,o un día, en el que el precio más alto es con el que se cierra.
+        \end{itemize}
+
+        \begin{itemize}
+
+            \item Finalmente para Bitcoin cash, el valor más alto es un 6.5\%, que para Bitcoin cash son 7 días, en el precio más bajo es el que cierra.
+
+            \item El porcentaje más bajo es de 0.92\% ,o un día, en el que el precio más alto es con el que se cierra.
     
-    Para Bitcoin Cash, esto solo representa menos del 18\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
+            \item Para Bitcoin Cash, esto solo representa menos del 18\% por lo que en su mayoría, los altos y los bajos de la moneda se daban no en el comienzo o final, si no durante el día.
+        \end{itemize}
+
+    \end{itemize}
 
 
     \subsubsection*{¿Es el número de Bitcoins representado por una función geometrica?}
@@ -274,23 +297,27 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
 
     Bitcoin fue programado con la idea de que un nuevo bloque se descubre cada 10 minutos. Esto lo hace adaptivamente, es decir, aumenta o disminuye el trabajo dependiendo de la cantidad de mineros que hayan en la red.
 
-    La recompenza por encontrar un bloque fue de inicialmente 50 Bitcoins y otra mec\'anica en Bitcoin es que la recompenza por encontrar un bloque se divide en 2 cada <<ciclo>>, siendo un ciclo cada 4 a\~nos.
+    La recompensa por encontrar un bloque fue de inicialmente 50 Bitcoins y otra mec\'anica en Bitcoin es que la recompensa por encontrar un bloque se divide en 2 cada <<ciclo>>, siendo un ciclo cada 4 a\~nos.
 
     Aunque no se sabe porque se eligieron que inicialmente se obtengan 50 Bitcoins por bloque, que cada 10 minutos se descubra un bloque o que un ciclo sea cada 4 a\~nos, con esto se puede calcular cuantas monedas teoricamente se obtienen.
 
-    Considerando 6 bloques por hora \\
-                 24 horas en un d\'ia \\
-                 365 d\'ias en un a\~no \\
-                 4 a\~nos para un ciclo \\
+    Considerando: 
+    \begin{itemize}
+        \item 6 bloques por hora 
+
+        \item 24 horas en un d\'ia
+
+        \item 365 d\'ias en un a\~no
+
+        \item4 a\~nos para un ciclo
+
+    \end{itemize}
 
     $$6 * 24 * 365 * 4 = 210240$$
-    $$6 * 24 * x * 4 = 52500$$
 
-    $$6 * 24 * x * 4 = 52500$$
+    $$210240 \approx 210000$$
 
-    $$210240 \~= 210000$$
-
-    Estos son el n\'umero de bloques que se esperan encontrar.
+    Estos son el n\'umero de bloques que son necesarios para que la recompensa sea reducida a la mitad.
 
     Para el n\'umero de bitcoins se tiene que encontrar el resultado de la suma infinita de monedas por bloques:
     
@@ -310,26 +337,22 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
 
     $$ 210000 * 100 = 21000000 $$
 
-    Como conocemos la f\'ormula para encontrar el n\'umero de bloques, podemos calcular cuantos Bitcoin deber\'ian haber en cierto tiempo. Se muestra en la tabla siguiente:
+    Este resultado no significa que ya no se a\~nadiran nuevos bloques al Blockchain una vez que se hayan minado todas las monedas, agregar bloques es necesario para el funcionamiento del protocolo, pero aunque se agreguen m\'as bloques, la recompenza de Bitcoins de estos es tan peque\~na que por redondeo se hacen 0.
+    \\
 
-    $$ 2009-01-03 : 0  : 50$$
-        
-    $$ 2010-01-03 : 2625000 : 50  $$
+    Ya que conocemos la f\'ormula para generar el n\'umero de bloques, uno esperar\'ia poder predecir el n\'umero de mondeas en un cierto tiempo. Intentemos hacer eso:
+    \\
+    Con la fecha inicial, 3 de Enero de 2009, calcularemos cuantas monedas deben haber en un a\~no:
 
-    $$ 2011-01-03 : 5250000 : 50  $$
+    %[HACER CALCULOS]
 
-    $$ 2011-07-03 : 6562500 : 50  $$
-
-    $$ 2011-07-03 : 5250000 : 50  $$
-
-    $$ 2011-07-03 : 5250000 : 50  $$
 
     Pero al revisar estos datos con los encontrados en el dataset, vemos que hay discrepancias de hasta %[PORCENTAJE_ERROR], entonces porque se da esto?
 
 
     %[INSERTAR_GRAFICO_NUM_BTC_EN_TIEMPO]
 
-    Como se puede observar, el n\'umero de bitcoins es constante en intervalos de aproximadamente cuatro a\~nos y, despu\'es de ese periodo, se nota un declive en el n\'umero. Hasta ahora solo existen dos de estos que corresponden a dos veces que se a disminuido la recompenza por bloque a la mitad (ahora mismo la recompenza de bitcoins por bloque es de 12.5).
+    Como se puede observar, el n\'umero de bitcoins es constante en intervalos de aproximadamente cuatro a\~nos y, despu\'es de ese periodo, se nota un declive en el n\'umero. Hasta ahora solo existen dos de estos que corresponden a dos veces que se a disminuido la recompensa por bloque a la mitad (ahora mismo la recompensa de bitcoins por bloque es de 12.5).
 
     %[HACER_PRUEBA_DE_AJUSTE]
 
