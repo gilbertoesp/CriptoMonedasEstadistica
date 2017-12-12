@@ -6,8 +6,9 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 
-\usepackage[spanish]{babel}
-\graphicspath{ {img/} }
+%"\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\graphicspath{ {../png/} }
 
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \title{Criptomonedas}
@@ -114,7 +115,7 @@ Por \'ultimo, el hotel y restaurante La Fonda en la carretera Tijuana Ensenada, 
 	\subsection*{Bitcoin}
         \subsubsection*{Historia}
         
-Bitcoin es la primera implementaci\'on de un concepto conocido como "moneda criptogr\'afica", la cual fue descrita por primera vez en 1998 por Wei Dai en la lista de correo elect\'onico "cypherpunks", donde propuso la idea de un nuevo tipo de dinero que utilizara la criptograf\'ia para controlar su creaci\'on y las transacciones, en lugar de que lo hiciera una autoridad centralizada.
+Bitcoin es la primera implementaci\'on de un concepto conocido como <<moneda criptogr\'afica>>, la cual fue descrita por primera vez en 1998 por Wei Dai en la lista de correo elect\'onico <<cypherpunks>>, donde propuso la idea de un nuevo tipo de dinero que utilizara la criptograf\'ia para controlar su creaci\'on y las transacciones, en lugar de que lo hiciera una autoridad centralizada.
 \\
 
  La primera especificaci\'on del protocolo Bitcoin y la prueba del concepto la public\'o Satoshi Nakamoto en el 2009 en una lista de correo electr\'onico. Satoshi abandon\'o el proyecto a finales de 2010 sin revelar mucho sobre su persona. Desde entonces, la comunidad ha crecido de forma exponencial y cuenta con numerosos desarrolladores que trabajan en el protocolo Bitcoin.
@@ -151,7 +152,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
             La wallet oficial de Bitcoin es \textit{Bitcoin Core} la misma palicacion se utiliza para la mineria si es que sea desea, pero hay muchas alternativas, una para cada nueva moneda que emerge, adicionalmente hay wallets que soportan diferentes monedas e incluso puedes hacer el cambio de una a otra desde la misma. Estas crecen cada vez, dandote en tiempo real varaiciones de los precios.
 
         \subsubsection*{Como funcionan}
-            Estas guardan tu "dirrecc\'on", tu llave privada \'unica para que se use de referencia para que los demas usuarios puedan mandarte monedas, tambien, pueden generar un codigo QR, que al ser escaneado ejecuta la transferencia, entonces con simplemente compartir esta imagen uno puede mandar y recibir monedas digitales, por lo cual esta informacion debe ser tratada con sumo cuidado                                
+            Estas guardan tu <<dirrecc\'on>>, tu llave privada \'unica para que se use de referencia para que los demas usuarios puedan mandarte monedas, tambien, pueden generar un codigo QR, que al ser escaneado ejecuta la transferencia, entonces con simplemente compartir esta imagen uno puede mandar y recibir monedas digitales, por lo cual esta informacion debe ser tratada con sumo cuidado.
 
             \subsubsection*{Como obtener Bitcoins}
 	Uno puede obtenerlos de diversas maneras, casas de cambio, trabajo por ello, o una simple transferencia en un local. La forma mas com\'un es comprarlos a trave\'es de una casa de cambio, en M\'exico podemos mencionar \textit{Bitso} y \textit{Volabit} empresas que estan respetando las regulaciones que rodean las criptomopnedas.
@@ -181,36 +182,56 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
     
     \end{itemize}
 	
-	\subsection*{Quien \"controla\" cambio de Bitcoin a USD}
+	\subsection*{Quien <<controla>> cambio de Bitcoin a USD}
 	Nadie, los intercambios entre divisas tipicas a BTC, son realizadas por empresas pero estas no lo controlan, solo ofrecen el servicio a una escala mas grande. Comprar criptomonedas de algun centro de cambio no seria distinto a comprarle a tu amigo unos y pagarle en efectivo.
 
 		\subsubsection*{Como funciona este cambio}
-        Se realiza de igual manera que comprar algun otro servicio con su tarjeta bancaria, pagamos la luz, el telefono el cable y se descuenta el total entonces tienes tu servicio en tu casa, con bitcoin enlazas tu "wallet" es decir, un direccion \'unica que te identifica como usuario de bitcoin, esta tu la guardas y proteges ya que esta es como una cuenta donde los datos de tus bitcoin son guardados y ese es el "servicio" que compraste
+        Se realiza de igual manera que comprar algun otro servicio con su tarjeta bancaria, pagamos la luz, el telefono el cable y se descuenta el total entonces tienes tu servicio en tu casa, con bitcoin enlazas tu \textit{wallet} es decir, un direccion \'unica que te identifica como usuario de bitcoin, esta tu la guardas y proteges ya que esta es como una cuenta donde los datos de tus bitcoin son guardados y ese es el <<servicio>> que compraste.
 
-\section*{Analisis BTC vs ETH vs BCH}
+\section*{An\'alisis BTC vs ETH vs BCH}
 
     \subsection*{Bitcoin}
 
     \subsubsection*{Precio con el que abre y precio con el que cierra}
 
-    Haciendo primeramente un analisis visual, en general no se muestra una gran diferencia entre el precio con el que se abre y con el que se cierra el día con bitcoin. La diferencia de las medias es de solo 4 dolares que cierra mas el bitcoin en promedio durante toda su vida que con lo que abre.
+    Haciendo primeramente un an\'alisis visual, en general no se muestra una gran diferencia entre el precio con el que se abre y con el que se cierra el día con bitcoin. La diferencia de las medias es de solo 4 dolares que cierra mas el bitcoin en promedio durante toda su vida que con lo que abre.
+    \\
     
     %[INSERTAR_GRAFICO_GLOBAL] 
-    
-    Entonces, quiza ver la diferencia por meses nos de una mejor idea de como los datos se puedan realacionar.
+    \includegraphics{btc/grafico_global}
 
-    Y ciertamente al menos ahora se puede ver que hay diferencias entre los precios en los que se abre y en los que se cierra.
-
-    Después de ver por meses, se puede apreciar mejor las diferencias que hay: En general Los precios con los que abre la moneda se ven menores comparados con los que cierra. El mes en el que hubo menos cambio promedio entre la apertura y el cierre fue Septiembre de 2015 con 0.11 dolares y el de mayor cambio es Noviembre de 2017 con 100.92 dolares, aunque es posible que la media este inflada porque son solo 8 días a diferencia de todos los demás meses. Ignorando ese mes, el siguiente es Octubre de 2017
-    con 68.7 dolares.
+    Ya que apenas se pueden notar visualmente debido a que visualmente una esta sobre la otra, pensamos que graficar las diferencias nos dar\'ia una mejor visualizaci\'on de los datos:
 
     %[INSERTAR_GRAFICOS_DIFERENCIAS]
+    \includegraphics{btc/grafico_global_diff}
+
+    
+    Entonces, quiza ver la diferencia por meses nos de una mejor idea de como los datos se puedan realacionar.
+    \\
+
+    Y ciertamente al menos ahora se puede ver que hay diferencias entre los precios en los que se abre y en los que se cierra.
+    \\
+
+    %[Tabla de diferencia en meses]
+    \\
+    \begin{itemize}
+
+        \item En general Los precios con los que abre la moneda se ven menores comparados con los que cierra.
+
+        \item El mes en el que hubo menos cambio promedio entre la apertura y el cierre fue Septiembre de 2015 con 0.11 dolares.
+
+        \item El mes de mayor cambio es Noviembre de 2017 con 100.92 dolares, aunque es posible que la media este inflada porque son solo 8 días a diferencia de todos los demás meses. Ignorando ese mes, el siguiente es Octubre de 2017 con 68.7 dolares.
+
+    \end{itemize}
+
 
     \subsubsection*{Precio más alto y más bajo de un día}
 
-    Similar a lo ya calculado, el precio m\'as alto o m\'as bajo de un d\'ia dice mucho sobre como fluctua el precio.
+    El precio m\'as alto o m\'as bajo de un d\'ia dice mucho sobre como fluctua el precio y por eso queremos analizarlo.
+    \\
 
     Visualmente con respecto a todos los a\~nos, se puede ver apenas las diferencias que hay entre el precio m\'as alto y m\'as bajo.
+    \\
 
     %[INSERTAR_GRAFICO_ALTO_BAJO_GLOBAL]
 
@@ -253,7 +274,7 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
 
     Bitcoin fue programado con la idea de que un nuevo bloque se descubre cada 10 minutos. Esto lo hace adaptivamente, es decir, aumenta o disminuye el trabajo dependiendo de la cantidad de mineros que hayan en la red.
 
-    La recompenza por encontrar un bloque fue de inicialmente 50 Bitcoins y otra mec\'anica en Bitcoin es que la recompenza por encontrar un bloque se divide en 2 cada "ciclo", siendo un ciclo cada 4 a\~nos.
+    La recompenza por encontrar un bloque fue de inicialmente 50 Bitcoins y otra mec\'anica en Bitcoin es que la recompenza por encontrar un bloque se divide en 2 cada <<ciclo>>, siendo un ciclo cada 4 a\~nos.
 
     Aunque no se sabe porque se eligieron que inicialmente se obtengan 50 Bitcoins por bloque, que cada 10 minutos se descubra un bloque o que un ciclo sea cada 4 a\~nos, con esto se puede calcular cuantas monedas teoricamente se obtienen.
 
@@ -267,7 +288,7 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
 
     $$6 * 24 * x * 4 = 52500$$
 
-    $$210240 ~= 210000$$
+    $$210240 \~= 210000$$
 
     Estos son el n\'umero de bloques que se esperan encontrar.
 
@@ -277,13 +298,13 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
 
     Esto es equivalente a la serie:
 
-    $$ 50 sum_{i = 0}^{\infty} \frac{1}{2^{i}} = 50 (1 + 0.5 + 0.25 + ...) $$
+    $$ 50 \sum_{i = 0}^{\infty} \frac{1}{2^{i}} = 50 (1 + 0.5 + 0.25 + ...) $$
 
     Y la serie geom\'etrica resultante se sabe que es:
 
-    $$ 50 sum_{i = 0}^{\infty} \frac{1}{2^{i}} = 50 (2) $$
+    $$ 50 \sum_{i = 0}^{\infty} \frac{1}{2^{i}} = 50 (2) $$
 
-    $$ 50 sum_{i = 0}^{\infty} \frac{1}{2^{i}} = 100 $$
+    $$ 50 \sum_{i = 0}^{\infty} \frac{1}{2^{i}} = 100 $$
 
     Con esto, solo es necesario multiplicar los resultados que obtuvimos:
 
