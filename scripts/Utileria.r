@@ -219,6 +219,7 @@ diferenciasHighLow_set <- function(data,date_1,date_2){
     return(data.frame(Date, Differences))
 }
 
+<<<<<<< HEAD
 #Genera un vector con los porcentajesde cambio entre los precios de la primera fecha contra
 # la segunda, siendo el orden open, high, low, close
 porcentaje <- function(data,date_1,date_2){
@@ -236,5 +237,73 @@ porcentaje <- function(data,date_1,date_2){
                         (diff[4] / set_1[[5]]) * 100 )
 
     return(porcentaje)
+=======
+
+#Funcion que encuentra el valor maximo y el valor minimo entre las diferencias en valor absoluto de dos columnas en un data frame. En el caso del maximo indica si viene de una
+#diferencia positiva o negativa
+getMaxMinDifference <- function(datos, col1, col2)
+{
+    maxdif = datos[[1, col1]] - datos[[1, col2]]
+    maxdate = datos[[1, "Date"]]
+    mindif = abs(maxdif)
+    mindate = maxdate
+
+    for(i in 2:nrow(datos)){
+        diff = datos[[i, col1]] - datos[[i, col2]]
+        if(abs(diff) > abs(maxdif)){
+            maxdif = diff
+            maxdate = datos[[i, "Date"]]
+        }
+        if(abs(diff) < mindif){
+            mindif = abs(diff)
+            mindate = datos[[i, "Date"]]
+        }
+    }
+    
+    print(paste("The max difference:", maxdif))
+    print(paste("The date of the max difference:", maxdate))
+
+    print(paste("The min difference:", mindif))
+    print(paste("The date of the min difference:", mindate))
+}
+
+#Funcion que encuentra el valor maximo y el valor minimo entre las diferencias en valor absoluto de dos columnas en un data frame. En el caso del maximo indica si viene de una
+#diferencia positiva o negativa
+getMaxMinDifference <- function(datos, col1, col2)
+{
+    maxdif = datos[[1, col1]] - datos[[1, col2]]
+    maxdate = datos[[1, "Date"]]
+    maxdifneg = maxdif
+    maxdateneg = maxdate
+
+    
+    mindif = abs(maxdif)
+    mindate = maxdate
+
+    for(i in 2:nrow(datos)){
+        diff = datos[[i, col1]] - datos[[i, col2]]
+        if(diff > maxdif){
+            maxdif = diff
+            maxdate = datos[[i, "Date"]]
+        }
+        if(diff < maxdifneg){
+            maxdifneg = diff
+            maxdateneg = datos[[i, "Date"]]
+        }
+        if(abs(diff) < mindif){
+            mindif = abs(diff)
+            mindate = datos[[i, "Date"]]
+        }
+    }
+    
+    print(paste("The max difference:", maxdif))
+    print(paste("The date of the max difference:", maxdate))
+
+    print(paste("The max negative difference:", maxdifneg))
+    print(paste("The date of the max negative difference:", maxdateneg))
+
+    print(paste("The min difference:", mindif))
+    print(paste("The date of the min difference:", mindate))
+>>>>>>> 04911652b5f81c7689b1c464052aed985a989ca8
 }
 
