@@ -12,7 +12,6 @@ source("Utileria.r")
 set <- subset_date(BTC, min(BTC$Date), max(BTC$Date))
 
 #-----------------------------------------------------
-#-----------------------------------------------------
 png("../png/btc/fecha_vs_cantidad.png", width=1280, height=720)
 
 set <- subset_date(BTC,min(BTC$Date),"2013-01-01")
