@@ -47,14 +47,21 @@ plot_for_month_year_OpenClose <- function(data,year){
 
 years <- c("2013","2014","2015","2016","2017")
 i<-2
-for(i in 1:length(years)){
+#for(i in 1:length(years)){
 	# Save the plots in the directory for the pdf's, in the archive
-	archivo <- paste("../pdf/graficaMensual_BTC_", years[i], sep="")
-	archivo <- paste(archivo, ".pdf", sep="")
-	pdf(archivo)
+	#archivo <- paste("../pdf/graficaMensual_BTC_", years[i], sep="")
+	#archivo <- paste(archivo, ".pdf", sep="")
+	#pdf(archivo)
 	# Cambiar BTC por otro frame para 
-	plot_for_month_year_OpenClose(BTC,years[i])
-}
+	#plot_for_month_year_OpenClose(BTC,years[i])
+#}
+png("../png/btc/date_vs_open-close.png", width=1280, height=720)
+ggplot(BTC, aes(Date)) + 
+	geom_line(aes(y = Open, color="GREEN")) + 
+	geom_line(aes(y = Close, color="RED")) + 
+	scale_color_manual(labels=c("Open", "Close"),values=c("GREEN","RED")) + 
+	labs(y="Precio USD", title="Bitcoin open-close") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
 
 
 	#set_BTC <- subset_date(BTC,fechas[i], fechas[i+1])
