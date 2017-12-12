@@ -10,6 +10,8 @@
 \usepackage{graphicx}
 \graphicspath{ {../png/} }
 
+\usepackage[table,xcdraw]{xcolor}
+
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \title{Criptomonedas}
 \author{Gilberto Espinoza, Luis Fernando Sotomayor}
@@ -200,7 +202,7 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
     %[INSERTAR_GRAFICO_GLOBAL] 
     \includegraphics{btc/diferencias_BTC_OpenClose}
 
-    Ya que apenas se pueden notar visualmente debido a que visualmente una esta sobre la otra, pensamos que graficar las diferencias nos dar\'ia una mejor visualizaci\'on de los datos:
+    Ya que apenas se pueden notar debido a que visualmente una esta sobre la otra, pensamos que graficar las diferencias nos dar\'ia una mejor visualizaci\'on de los datos:
 
     \includegraphics[width = 18cm, height = 10cm]{btc/diferencias_BTC_OpenClose}
 
@@ -289,19 +291,27 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
     \end{itemize}
 
 
-    \subsubsection*{¿Es el número de Bitcoins representado por una función geometrica?}
+    \subsubsection*{¿Es el número de Bitcoins representado por una función geom\'etrica?}
 
-    Ya se menciono con anterioridad que el n\'umero de Bitcoins m\'aximos es 21 millones. Esto se debe a que la funci\'on que decide cuantos Bitcoins se crear\'an es de una serie geom\'etrica y su l\'imite tiende a ese n\'umero, pero, ser\'a esto cierto? 
+    Ya se menciono con anterioridad que el n\'umero de Bitcoins m\'aximos es 21 millones. Esto se debe a que la funci\'on que decide cuantos Bitcoins se dan como recompensa es de una serie geom\'etrica y su l\'imite tiende a ese n\'umero, pero, ser\'a esto cierto? 
 
     Primero hay que ver a que se debe que digan que son 21 millones.
+    \\
 
-    Bitcoin fue programado con la idea de que un nuevo bloque se descubre cada 10 minutos. Esto lo hace adaptivamente, es decir, aumenta o disminuye el trabajo dependiendo de la cantidad de mineros que hayan en la red.
+    \begin{enumerate}
 
-    La recompensa por encontrar un bloque fue de inicialmente 50 Bitcoins y otra mec\'anica en Bitcoin es que la recompensa por encontrar un bloque se divide en 2 cada <<ciclo>>, siendo un ciclo cada 4 a\~nos.
+        \item Bitcoin fue programado con la idea de que un nuevo bloque se descubre cada 10 minutos. Esto lo hace adaptivamente, es decir, aumenta o disminuye la dificultad de encontrar un nuevo bloque dependiendo de cuanto se tard\'o en encontrar el \'ultimo bloque.
 
-    Aunque no se sabe porque se eligieron que inicialmente se obtengan 50 Bitcoins por bloque, que cada 10 minutos se descubra un bloque o que un ciclo sea cada 4 a\~nos, con esto se puede calcular cuantas monedas teoricamente se obtienen.
+        \item La recompensa por encontrar un bloque fue de inicialmente 50 Bitcoins.
+            
+        \item La recompensa por encontrar un bloque se divide en 2 cada <<ciclo>>, siendo un ciclo cada 4 a\~nos.
 
-    Considerando: 
+        \item Aunque no se sabe porque se eligieron estas constantes en particular, estos datos son suficientes para calcular el n\'umero m\'aximo de monedas.
+
+    \end{enumerate}
+
+
+    Consideremos lo siguiente: 
     \begin{itemize}
         \item 6 bloques por hora 
 
@@ -342,12 +352,37 @@ La plataforma de compra de videojuegos online acepto Bitcoin como metodo de pago
 
     Ya que conocemos la f\'ormula para generar el n\'umero de bloques, uno esperar\'ia poder predecir el n\'umero de mondeas en un cierto tiempo. Intentemos hacer eso:
     \\
-    Con la fecha inicial, 3 de Enero de 2009, calcularemos cuantas monedas deben haber en un a\~no:
+    Considerando la fecha inicial, 3 de Enero de 2009, intentemos calcular cuantos bitcoins debe haber en ciertas fechas:
+    \\
+    En un a\~no se deber\'ian crear $6 * 24 * 365 * 50$ Bitcoins, estas son 2628000 monedas.
+    \\
+    En un a\~no y medio se deber\'ian crear $6 * 24 * 547 * 50$ Bitcoins, equivalente a 3938400 monedas.
+    \\
+    En 5 a\~nos se deber\'ian crear $(6 * 24 * 1460 * 50) + (6 * 24 * 365 * 25)$ Bitcoins, equivalente a 11826000 monedas.
+    \\
+    Pero cuando se revisa en los datos que se tienen se ve como no concuerdan:
 
-    %[HACER CALCULOS]
+    \begin{table}[]
+    \centering
+    \caption{My caption}
+    \label{my-label}
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    \rowcolor[HTML]{FFFFFF}
+    {\color[HTML]{333333} Fecha} & {\color[HTML]{333333} Total monedas  calculadas} & {\color[HTML]{333333} Total monedas existentes} & {\color[HTML]{333333} Error} & {\color[HTML]{333333} Error porcentual} \\ \hline
+    2010-01-03                   & 2628000                                          & 1644000                                         & 0.3744                       & 37.44                                   \\ \hline
+    2010-06-04                   & 3938400                                          & 2967250                                         & .2466                        & 24.66                                   \\ \hline
+    2014-01-03                   & 11826000                                         & 12211525                                        & .0326                        & 3.26                                    \\ \hline
+    \end{tabular}
+    \end{table}
 
+    Con estos pocos ejemplos podemos ver que hay discrepancias pronuciadas entre el n\'umero de Bitcoins calculados que deber\'ian haber y el que en realidad hay, ¿A que se puede deber esto?
+    \\
+    Cuando hicimos las predicciones del n\'umero de Bitcoins, estabamos asumiendo el caso que el programa considera optimo: que se agregar 6 bloques por hora, que desde el inicio se empezo con el ideal de n\'umero de bloques por hora y que los cambios en el poder de computo y la dificultad se cancelan el uno al otro todo el tiempo, las cuales son muy poco probables que hayan sucedido.
 
-    Pero al revisar estos datos con los encontrados en el dataset, vemos que hay discrepancias de hasta %[PORCENTAJE_ERROR], entonces porque se da esto?
+    Con esto que tenemos, veamos como se relacionan las monedas si el sistema funcionara de manera ideal y como realmente funciona:
+
+    %[INSERTAR_GRAFICO_MONEDASCALCULADAS_MONEDASREALES_CONTRA_TIEMPO]
 
 
     %[INSERTAR_GRAFICO_NUM_BTC_EN_TIEMPO]

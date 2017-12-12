@@ -219,7 +219,6 @@ diferenciasHighLow_set <- function(data,date_1,date_2){
     return(data.frame(Date, Differences))
 }
 
-<<<<<<< HEAD
 #Genera un vector con los porcentajesde cambio entre los precios de la primera fecha contra
 # la segunda, siendo el orden open, high, low, close
 porcentaje <- function(data,date_1,date_2){
@@ -237,8 +236,8 @@ porcentaje <- function(data,date_1,date_2){
                         (diff[4] / set_1[[5]]) * 100 )
 
     return(porcentaje)
-=======
-
+}
+    
 #Funcion que encuentra el valor maximo y el valor minimo entre las diferencias en valor absoluto de dos columnas en un data frame. En el caso del maximo indica si viene de una
 #diferencia positiva o negativa
 getMaxMinDifference <- function(datos, col1, col2)
@@ -304,6 +303,37 @@ getMaxMinDifference <- function(datos, col1, col2)
 
     print(paste("The min difference:", mindif))
     print(paste("The date of the min difference:", mindate))
->>>>>>> 04911652b5f81c7689b1c464052aed985a989ca8
+}
+
+#Regresa un data frame con las monedas que deberian haber si la creacion de bloques fuera la ideal
+#Las fechas del data frame son de 2009-11-10 a 2017-11-08
+predictNumberBtc <- function()
+{
+    #Date = seq(as.Date("2009-11-10"), as.Date("2017-11-08"), by="days")
+    Date = seq(as.Date("2009-01-03"), as.Date("2017-11-08"), by="days")
+    
+    prediction = vector(, length(Date))
+    reward = 50
+    day = 1
+    initial = 0
+
+    for(i in 1:length(prediction)){
+
+        prediction[i] = 6 * 24 * day * reward + initial
+
+        day = day + 1
+
+        if(i %% 1460 == 0){
+            reward = reward / 2
+            initial = prediction[i]
+            day = 1
+        }
+    }
+
+    df = data.frame(Date, prediction)
+
+    return( subset_date(df, "2009-11-10", "2017-11-08") )
+
+    #return( data.frame(Date, prediction) )
 }
 
