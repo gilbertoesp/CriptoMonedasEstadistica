@@ -248,3 +248,42 @@ getMaxMinDifference <- function(datos, col1, col2)
     print(paste("The date of the min difference:", mindate))
 }
 
+#Funcion que encuentra el valor maximo y el valor minimo entre las diferencias en valor absoluto de dos columnas en un data frame. En el caso del maximo indica si viene de una
+#diferencia positiva o negativa
+getMaxMinDifference <- function(datos, col1, col2)
+{
+    maxdif = datos[[1, col1]] - datos[[1, col2]]
+    maxdate = datos[[1, "Date"]]
+    maxdifneg = maxdif
+    maxdateneg = maxdate
+
+    
+    mindif = abs(maxdif)
+    mindate = maxdate
+
+    for(i in 2:nrow(datos)){
+        diff = datos[[i, col1]] - datos[[i, col2]]
+        if(diff > maxdif){
+            maxdif = diff
+            maxdate = datos[[i, "Date"]]
+        }
+        if(diff < maxdifneg){
+            maxdifneg = diff
+            maxdateneg = datos[[i, "Date"]]
+        }
+        if(abs(diff) < mindif){
+            mindif = abs(diff)
+            mindate = datos[[i, "Date"]]
+        }
+    }
+    
+    print(paste("The max difference:", maxdif))
+    print(paste("The date of the max difference:", maxdate))
+
+    print(paste("The max negative difference:", maxdifneg))
+    print(paste("The date of the max negative difference:", maxdateneg))
+
+    print(paste("The min difference:", mindif))
+    print(paste("The date of the min difference:", mindate))
+}
+
