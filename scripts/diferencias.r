@@ -26,10 +26,10 @@ source("Utileria.r")
 #diferencias <- data.frame(Date,Differences)
 #diferencias
 
-#pdf("../pdf/diferencias_BTC_OpenClose")
+#png("../png/diferencias_BTC_OpenClose")
 #ggplot(diferencias, aes(Date,Differences)) + geom_line()
 
-#pdf("../pdf/diferencias_BTC_HighLow")
+#png("../png/diferencias_BTC_HighLow")
 #acercamiento_1 <- subset_date(BTC,"2014-08-01","2015-04-01")
 #ggplot(diferencias, aes(Date,Differences)) + geom_line()
 
@@ -39,60 +39,109 @@ source("Utileria.r")
 
 #diferencias <- diferenciasOpenClose_set(BTC,"2017-08-01","2017-12-01")
 #ggplot(diferencias, aes(Date,Differences)) + geom_line()
-pdf("../pdf/btc/diferencias_BTC_HighLow")
+png("../png/btc/diferencias_BTC_HighLow.png", width=1280, height=720)
 
 diferencias <- diferenciasHighLow_set(BTC,min(BTC$Date),max(BTC$Date))
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(diferencias$Date,diferencias$Differences)) + geom_line() +
+	labs(x="Fecha", y="High-Low",title="Diferencias High-Low") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
+
+png("../png/btc/diferencias_BTC_HighLow_1.png", width=1280, height=720)
 
 diferencias <- diferenciasHighLow_set(BTC,"2013-08-01","2014-06-01")
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="High-Low",title="Diferencias High-Low 2013-08-01/2014-06-01") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
+
+png("../png/btc/diferencias_BTC_HighLow_2.png", width=1280, height=720)
 
 diferencias <- diferenciasHighLow_set(BTC,"2017-01-01","2017-12-01")
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="High-Low",title="Diferencias High-Low 2017-01-01/2017-12-01") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
 
-pdf("../pdf/btc/diferencias_BTC_OpenClose")
+#------------------------------------------------
+png("../png/btc/diferencias_BTC_OpenClose.png", width=1280, height=720)
 
 diferencias <- diferenciasOpenClose_set(BTC,min(BTC$Date),max(BTC$Date))
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="Open-Close",title="Diferencias Open-Close") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
+
+png("../png/btc/diferencias_BTC_OpenClose_1.png", width=1280, height=720)
 
 diferencias <- diferenciasOpenClose_set(BTC,"2013-08-01","2014-06-01")
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="Open-Close",title="Diferencias Open-Close 2013-08-01/2014-06-01") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
+
+png("../png/btc/diferencias_BTC_OpenClos_2.png", width=1280, height=720)
 
 diferencias <- diferenciasOpenClose_set(BTC,"2017-01-01","2017-12-01")
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="Open-Close",title="Diferencias Open-Close 2017-01-01/2017-12-01") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
+
 
 #-----------------------------------------------------
-pdf("../pdf/eth/diferencias_ETH_HighLow")
+png("../png/eth/diferencias_ETH_HighLow.png", width=1280, height=720)
 
 diferencias <- diferenciasHighLow_set(ETH,min(ETH$Date),max(ETH$Date))
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="High-Low",title="Diferencias High-Low") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
 
-diferencias <- diferenciasHighLow_set(ETH,"2016-08-01","2016-10-01")
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+png("../png/eth/diferencias_ETH_HighLow_2.png", width=1280, height=720)
 
-diferencias <- diferenciasHighLow_set(ETH,"2017-01-01",max(ETH$Date))
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+diferencias <- diferenciasHighLow_set(ETH,"2016-06-01","2016-10-01")
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="High-Low",title="Diferencias High-Low 2016-06-01/2016-10-01") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
 
-pdf("../pdf/eth/diferencias_ETH_OpenClose")
+png("../png/eth/diferencias_ETH_HighLow_3.png", width=1280, height=720)
+
+diferencias <- diferenciasHighLow_set(ETH,"2017-03-01",max(ETH$Date))
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="High-Low",title="Diferencias High-Low 2017-03-01/2017-11-07") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
+
+
+png("../png/eth/diferencias_ETH_OpenClose.png", width=1280, height=720)
 
 diferencias <- diferenciasOpenClose_set(ETH,min(ETH$Date),max(ETH$Date))
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="Open-Close",title="Diferencias Open-Close") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
 
-diferencias <- diferenciasOpenClose_set(ETH,"2016-08-01","2016-10-01")
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+png("../png/eth/diferencias_ETH_OpenClose_2.png", width=1280, height=720)
 
-diferencias <- diferenciasOpenClose_set(ETH,"2017-01-01",max(ETH$Date))
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+diferencias <- diferenciasOpenClose_set(ETH,"2016-06-01","2016-10-01")
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="Open-Close",title="Diferencias Open-Close 2016-06-01/2016-10-01") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
+
+png("../png/eth/diferencias_ETH_OpenClose_3.png", width=1280, height=720)
+
+diferencias <- diferenciasOpenClose_set(ETH,"2017-03-01",max(ETH$Date))
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="Open-Close",title="Diferencias Open-Close 2017-03-01/2017-11-07") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
+
 #-----------------------------------------------------
-pdf("../pdf/other/diferencias_CASH_HighLow")
+png("../png/other/diferencias_CASH_HighLow.png", width=1280, height=720)
 
 diferencias <- diferenciasHighLow_set(CASH,min(CASH$Date),max(CASH$Date))
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="High-Low",title="Diferencias High-Low") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
 
-pdf("../pdf/other/diferencias_CASH_OpenClose")
+
+png("../png/other/diferencias_CASH_OpenClose.png", width=1280, height=720)
 
 diferencias <- diferenciasOpenClose_set(CASH,min(CASH$Date),max(CASH$Date))
-ggplot(diferencias, aes(Date,Differences)) + geom_line()
+ggplot(diferencias, aes(Date,Differences)) + geom_line() +
+	labs(x="Fecha", y="Open-Close",title="Diferencias Open-Close") +
+	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
 
 #-----------------------------------------------------
 
