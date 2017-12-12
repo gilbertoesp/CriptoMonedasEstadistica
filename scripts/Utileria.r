@@ -218,3 +218,23 @@ diferenciasHighLow_set <- function(data,date_1,date_2){
     Differences <- set$High - set$Low
     return(data.frame(Date, Differences))
 }
+
+#Genera un vector con los porcentajesde cambio entre los precios de la primera fecha contra
+# la segunda, siendo el orden open, high, low, close
+porcentaje <- function(data,date_1,date_2){
+    set_1 <- subset(data,subset=data$Date==date_1)
+    set_2 <- subset(data,subset=data$Date==date_2)
+
+    diff <- c(set_2[["Open"]] - set_1[["Open"]], 
+                set_2[["High"]] - set_1[["High"]], 
+                set_2[["Low"]] - set_1[["Low"]], 
+                set_2[["Close"]] - set_1[["Close"]] )
+    
+    porcentaje <- c( (diff[1] / set_1[[2]]) * 100,
+                        (diff[2] / set_1[[3]]) * 100,
+                        (diff[3] / set_1[[4]]) * 100,
+                        (diff[4] / set_1[[5]]) * 100 )
+
+    return(porcentaje)
+}
+
