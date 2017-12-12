@@ -152,5 +152,69 @@ getPercentRaiseDay <- function(datos)
     return(raise / 100)
 }
 
+# Plotea una grafica por cada mes del anio dado, el cual debe ser String
+# del frame dado en data, en la graifca se contraponen los valores de apretura y clausuara
+plot_for_month_year_OpenClose <- function(data,year){
+
+    months <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" )
+    fechas <- c("-01-01","-02-01","-03-01","-04-01","-05-01",
+                    "-06-01","-07-01","-08-01","-09-01","-10-01",
+                    #Se agrega una fecha auxiliar fantasma para plotear el ultimo mes
+                    "-11-01","-12-01","-12-31")
+
+    fechas <- paste(year,fechas, sep="")
+
+    for(i in 1:length(fechas)){
+        set <- subset_date(data,fechas[i], fechas[i+1])
+        if(nrow(set) > 0){
+            print(ggplot(set, aes(Date)) + 
+                geom_line(aes(y = Open, color="GREEN")) + 
+                geom_line(aes(y = Close, color="RED")) + 
+                scale_color_manual(labels=c("Open", "Close"),values=c("GREEN","RED")) + 
+                labs(y="Precio USD", title=paste("Open-Close",months[i])))
+        }
+    }
+}
+
+# Plotea una grafica por cada mes del anio dado, el cual debe ser String
+# del frame dado en data, en la graifca se contraponen los valores de high y low
+plot_for_month_year_OpenClose <- function(data,year){
+
+    months <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" )
+    fechas <- c("-01-01","-02-01","-03-01","-04-01","-05-01",
+                    "-06-01","-07-01","-08-01","-09-01","-10-01",
+                    #Se agrega una fecha auxiliar fantasma para plotear el ultimo mes
+                    "-11-01","-12-01","-12-31")
+
+    fechas <- paste(year,fechas, sep="")
+
+    for(i in 1:length(fechas)){
+        set <- subset_date(data,fechas[i], fechas[i+1])
+        if(nrow(set) > 0){
+            print(ggplot(set, aes(Date)) + 
+                geom_line(aes(y = High, color="GREEN")) + 
+                geom_line(aes(y = Low, color="RED")) + 
+                scale_color_manual(labels=c("High", "Low"),values=c("GREEN","RED")) + 
+                labs(y="Precio USD", title=paste("High-Low",months[i])))
+        }
+    }
+}
 
 
+# Regresa un data frame con la fecha y la diferencia entre el precio de apertura y el 
+# de clausura de la data(frame csv)
+diferenciasOpenClose_set <- function(data,date_1,date_2){
+    set <- subset_date(data,date_1,date_2)
+    Date<- set$Date
+    Differences <- set$Open - set$Close
+    return(data.frame(Date, Differences))
+}
+
+# Regresa un data frame con la fecha y la diferencia entre el precio minimo y el 
+# maximo de la data(frame csv)
+diferenciasHighLow_set <- function(data,date_1,date_2){
+    set <- subset_date(data,date_1,date_2)
+    Date<- set$Date
+    Differences <- set$High - set$Low
+    return(data.frame(Date, Differences))
+}
