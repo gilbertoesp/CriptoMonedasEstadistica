@@ -305,12 +305,12 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \begin{figure}
         \centering
 
-        \includegraphics{btc/date_vs_high-low}
+        \includegraphics[width = 18cm, height = 10cm]{btc/date_vs_high-low}
 
         \caption{Precio m\'as alto y m\'as bajo btc}
     \end{figure}
 
-    En un esfuerzo para ver mejor las diferencias que hay, tambi\'en graficamos las diferencias y con esto quiza encontrar alg\'un patr\'on.
+    En un esfuerzo para ver mejor las diferencias que hay, tambi\'en graficamos las diferencias en la figura 6 y con esto quiza ayude a encontrar alg\'un patr\'on.
 
     \begin{figure}
         \centering
@@ -348,7 +348,6 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
         \item Es interesante como la fecha con menor variaci\'on de alto y bajo concuerda con la fecha de menor variaci\'on del precio en que abre y cierra y que el d\'ia de mayor variaci\'on de alto y bajo est\'a a solo un d\'ia del de abertura y cierre.
 
     \end{itemize}
-
 
 
     Por curiosidad, revisamos que tan seguido el precio máximo o mínimo era durante los periodos de apertura o cierre del día para las monedas.
@@ -396,7 +395,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
     \begin{itemize}
 
-        \item  Todos los porcentajes se mantienen por debajo del 10\% sin contar el durante.
+        \item  Todos los porcentajes se mantienen por debajo del 10\% sin contar el <<durante>> (ya que los datos solo hacen referencia al principio o al final de un d\'ia).
 
         \begin{itemize}
 
@@ -548,21 +547,9 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \\
 
 
-    \subsubsection*{Cantidad de monedas y precio}
-
-    Con un poco de conocimiento de economía, resulta natural pensar en relacionar la cantidad de monedas en un mercado con el precio que estas tienen. Entonces es de interes revisar si las criptomonedas cumplen con esto, es decir, si se puede ver dependencia entre la cantidad de criptomonedas y su precio.
-
-    \begin{figure}
-        \centering
-
-        \includegraphics[width = 18cm, height = 10cm]{btc/cantidad_vs_precio}
-
-        \caption{Cantidad de monedas contra precio de moneda}
-    \end{figure}
-
     \subsubsection*{Blockchain}
 
-    Como fue discutido al inicio, el protocolo Blockchain es lo que permitio que las criptomonedas existieran por haber solucionado el problema del gasto doble por lo que es de especial interes analizarlo al menos un poco, especificamente el tamaño del Blockchain ya que es uno de los datos que se tienen.
+    Como fue discutido al inicio, el protocolo Blockchain es lo que permitio que las criptomonedas existieran.
 
     Revisaremos si el tamaño del Blockchain y la cantidad de bitcoins estan correlacionados y si aumenta o disminuye con el tiempo.
 
@@ -576,7 +563,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
     \subsubsection*{Hash rate}
 
-    Hash rate (o taza de hasheo) se refiere a que tan poderosa puede ser una maquina de un minero de criptomonedas, especificamente se refiere al número de veces que una función hash es calculada por segundo. Las ganancias que un minero espera son directamente proporcionales al hash rate.
+    Hash rate (o taza de hasheo) se refiere a que tan poderosa puede ser una maquina de un minero de criptomonedas.
 
     El como se relaciona el hash rate con el tiempo puede ser de interes porque se podria ver como avanza el número de calculos que los mineros deben de realizar con las monedas a través del tiempo.
 
@@ -597,5 +584,6 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
 	
 \section{Bibliografia}
+
 
 \end{document}
