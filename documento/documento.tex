@@ -158,9 +158,11 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
 
 
-\section{An\'alisis BTC vs ETH vs BCH}
+\section{An\'alisis}
 
-    Comencemos el an\'alisis con un res\'umen de la informaci\'on que comparten todas las criptomonedas
+    Analizaremos algunos datos de Bitcoin y unos pocos de otras criptomonedas para complementar pero ya que Bitcoin es la primera criptomoneda, la m\'as popular y la m\'as desarrollada, se tiene m\'as informaci\'on de ella y en general es de mayor interes que las dem\'as, al menos por ahora.
+    \\
+    Comencemos el an\'alisis con un res\'umen de la informaci\'on que comparten todas las criptomonedas de los archivos de informaci\'on que tenemos.
 
 
     \begin{table}[h]
@@ -179,11 +181,11 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     Media                                                                               & 822.1                              & 845                                 & 800.6                               & 826.3         \\ \hline
     Q3                                                                                  & 743.5                              & 759.4                               & 759.4                               & 744.8         \\ \hline
     \rowcolor[HTML]{9B9B9B} 
-    Max                                                                                 & 7405                               & 7617                                & 7617                                & 7407          \\ \hline
+    Max                                                                                 & 7405                               & 7617                                & 7333                                & 7407          \\ \hline
     \end{tabular}
     \end{table}
 
-    COMENTARIO SOBRE LO QUE SE VE EN LA TABLA Y PREELIMINAR 
+    Lamentablemente los datos que tenemos sobre Bitcoin no son desde sus inicios o poco tiempo despu\'es, si no de hasta 4 a\~nos despu\'es. A\'un as\'i se puede ver la gran variaci\'on del precio que ha tenido en toda su vida, con el menor precio en 65.53 dolares y mayor en 7617 dolares.
 
 
     \begin{table}[h]
@@ -206,7 +208,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \end{tabular}
     \end{table}
 
-    COMENTARIO SOBRE LO QUE SE VE EN LA TABLA Y PREELIMINAR 
+    Una de las monedas complementarias de las cuales hablaremos muy ligeramente es Ethereum. Esta moneda es la segunda criptomoneda m\'as adoptada despu\'es de Bitcoin aun contando su relativa novedad (fue creada en 2015) pero sus precios no son nada comparables a los de Bitcoin. Con un m\'inimo global de 0.4209 dolares y m\'aximo de 414.76 dolares.
 
     \begin{table}[h]
     \centering
@@ -215,7 +217,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \begin{tabular}{|l|l|l|l|l|}
     \hline
     \rowcolor[HTML]{9B9B9B} 
-    {\color[HTML]{333333} \begin{tabular}[c]{@{}l@{}}Ethereum\\ 2015-04-28\end{tabular}} & {\color[HTML]{333333} Precio abre} & {\color[HTML]{333333} Precio mayor} & {\color[HTML]{333333} Precio menor} & Precio cierra \\ \hline
+    {\color[HTML]{333333} \begin{tabular}[c]{@{}l@{}}Bitcoin Cash\\ 2017-07-23\end{tabular}} & {\color[HTML]{333333} Precio abre} & {\color[HTML]{333333} Precio mayor} & {\color[HTML]{333333} Precio menor} & Precio cierra \\ \hline
     Min                                                                                  & 212.2                              & 223.7                               & 201                                 & 213.2         \\ \hline
     \rowcolor[HTML]{9B9B9B} 
     Q1                                                                                   & 331.8                              & 360.7                               & 312                                 & 332           \\ \hline
@@ -228,6 +230,8 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \end{tabular}
     \end{table}
 
+    La otra moneda de la cual hablaremos muy poco es Bitcoin Cash. Esta moneda fue resultado de querer estar regido bajo diferentes reglas que Bitcoin pero comparte la misma base y ambos vienen del mismo Blockchain.
+
 
     \subsubsection*{Precio con el que abre y precio con el que cierra}
 
@@ -236,12 +240,10 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     
     \begin{figure}
         \centering
-        \textbf{Your title}\par\medskip
 
-        %[INSERTAR_GRAFICO_GLOBAL] 
-        %\includegraphics{btc/diferencias_BTC_OpenClose}
+        \includegraphics[width = 18cm, height = 10cm]{btc/date_vs_open-close}
 
-        \caption{Your caption}
+        \caption{Precio en que abre y cierra btc}
     \end{figure}
 
     En realidad no se puede extrar mucha informaci\'on porque lo que se alcanza a visualizar esta encimado y no se aprecia un dato de otro. Entonces graficamos las diferencias, tal y como se muestra en la figura 2.
@@ -249,7 +251,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \begin{figure}
         \centering
 
-    \includegraphics[width = 18cm, height = 10cm]{btc/diferencias_BTC_OpenClose}
+        \includegraphics[width = 18cm, height = 10cm]{btc/diferencias_BTC_OpenClose}
 
         \caption{Diferencias de precio en que abre y cierra btc}
     \end{figure}
@@ -303,8 +305,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \begin{figure}
         \centering
 
-        %[INSERTAR_GRAFICO_ALTO_BAJO_GLOBAL]
-        %\includegraphics[width = 18cm, height = 10cm]{btc/diferencias_BTC_OpenClose_2}
+        \includegraphics{btc/date_vs_high-low}
 
         \caption{Precio m\'as alto y m\'as bajo btc}
     \end{figure}
@@ -587,59 +588,14 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
         \caption{Hash rate contra tiempo}
     \end{figure}
 
-   \subsubsection*{Ingreso de los mineros}
-
-    Actualmente a mucha gente le interesa minar Bitcoins debido a las ganancias que puede tener por lo que ver como ha cambiado el ingreso de los mineros puede ser interesante.
-
-    %[INSERTAR_MINER_REVENUE_VS_TIEMPO]
-
-    Individualmente a cada minero le interesa su ingreso así que ver de que puede depender es importante para estos. ¿Depende del número de monedas? Veamos:
-
-    %[INSERTAR_MINER_REVENUE_VS_NUMERO_MONEDAS]
-
-    %[HACER_PRUEBA_DEPENDENCIA]
-    
-    Entonces podriamos responder la pregunta, ¿Cuándo fue más rehabituable ser un minero?
-
-    %[ANALIZAR_CUANDO_FUE_MAS_REHABITUABLE]
-
+\section{Conclusiones}
 
 	\subsubsection*{C\'omo es que el precio historico de las diferentes criptomonedas cambia en el tiempo?}
 	\subsubsection*{Las criptomonedas son volatiles o estables?}
 	\subsubsection*{Se relaciona la fluctiaci\'on de precio de una criptomoneda con otra?}
 	\subsubsection*{Los cambios de precio se dan con respecto a temporadas?}
 
-
-
-
-    La principal accion que realizaremos en el analisis es probar correlacion entre los datos y ver si es significativa la informacion que encontremos.
-    \\
-    Para ayudarnos, tambien interpretaremos graficos de los datos.
-    \\
-    Tambien intetaremos correlacionar Bitcoin con Ethereum.
-    \\
-    precio mas bajo en bitcoin cada anio
-        se puede corresponder a algun suceso?
-    Cambio mas abrupto de cresta a valle o viceversa del precio
-
-    series de tiempo de las criptomonedas
-        sobreponer la media de cada mes y anio
-    sobreponer el precio mas alto y bajo de los dias
-    Comparar bitcoin a las demas monedas
-        mostrar las diferencias extremas entre bitcoin y las demas monedas
-    hay dependencia entre el precio de las monedas?
-        probar usando la media mensual
-        probar usando la media global
-
-\section{Conclusiones}
-
-	\subsection*{predicciones de terceros de btc}
-	\subsection*{predicciones propias}
 	
 \section{Bibliografia}
-
-
-
-
 
 \end{document}
