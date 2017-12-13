@@ -234,6 +234,34 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
     La otra moneda de la cual hablaremos muy poco es Bitcoin Cash. Esta moneda fue resultado de querer estar regido bajo diferentes reglas que Bitcoin pero comparte la misma base y ambos vienen del mismo Blockchain.
 
+\subsubsection*{Independencia}
+Se realizaron pruebas de independencia $\chi^{2}$.
+\\
+
+data:  ETH-High y CASH-High\\
+X-squared = 11448, df = 11342, p-value = 0.2401
+\\
+
+data:  CASH-High y BTC-High\\
+X-squared = 11448, df = 11342, p-value = 0.2401
+\\
+
+data:	BTC-High y ETH-High\\
+X-squared = 11556, df = 11449, p-value = 0.2391
+\\
+
+data:  ETH-Low y CASH-Low\\
+X-squared = 11556, df = 11449, p-value = 0.2391
+\\
+
+data:  CASH-Low y BTC-Low\\
+X-squared = 11556, df = 11449, p-value = 0.2391
+\\
+
+data:  BTC-Low y ETH-Low\\
+X-squared = 11556, df = 11449, p-value = 0.2391
+
+En estas sencillas pruebas notamos como p-value se mantiene por debajo del 0.25 pero siempre encima del 0.05 podemos decir que los precios son independientes. Este conocimiento nos dice que cada moneda se mantiene por si misma y si llegara un hipotetico caso en el que Bitcoin se desploma, las demas monedas podr\'ian sobrevivir de forma paralela.
 
     \subsubsection*{Precio con el que abre y precio con el que cierra}
 
@@ -549,6 +577,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \\
 
 
+
     \subsubsection*{Blockchain}
 
     Como fue discutido al inicio, el protocolo Blockchain es lo que permitio que las criptomonedas existieran.
@@ -586,8 +615,8 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
  	\subsubsection*{Las criptomonedas son volatiles o estables?}
 	Volatiles, no pudimos inferir algo que tuviera alguna consecuencia contra el precio. Se noto que en los periodos donde se notan picos en los precios, tambien hay picos en las diferencia entre que tan alto y tan bajo es el precio en un unico dia, demostrando asi su volatibilidad, pues existen picos donde en un solo dia el precio var\'ia hasta \$800  USD.
  	\subsubsection*{Se relaciona la fluctiaci\'on de precio de una criptomoneda con otra?}
--	\subsubsection*{Los cambios de precio se dan con respecto a temporadas?}
--
+	\subsubsection*{Los cambios de precio se dan con respecto a temporadas?}
+
  	
 	\subsubsection*{Los cambios de precio se dan con respecto a temporadas?}
 	Los cambios en los precios se noto que fueron durante los periodos en los cuales su popularidad aumento, son totalmente susceptibles a la oferta-demanda de si mismas, lo cual las pone inestables y a total merced de los usuarios, lo cual es unos de los objetivos que plantea esta alternativa al dinero clasico.
@@ -618,7 +647,6 @@ Spectrocoincom. (2017),
 Bitcoin Latam
 Bitcoinorg. (2017), 
  "\url{ https://bitcoin.org/files/bitcoin-paper/bitcoin_es_latam.pdf}"
-
 
 \end{thebibliography}
 
