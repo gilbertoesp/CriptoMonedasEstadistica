@@ -67,8 +67,8 @@ png("../png/btc/date_vs_high-low.png", width=1280, height=720)
 ggplot(BTC, aes(Date)) + 
 	geom_line(aes(y = High, color="GREEN")) + 
 	geom_line(aes(y = Low, color="RED")) + 
-	scale_color_manual(labels=c("High", "High"),values=c("GREEN","RED")) + 
-	labs(y="Precio USD", title="Bitcoin High-Close") +
+	scale_color_manual(labels=c("High", "Low"),values=c("GREEN","RED")) + 
+	labs(y="Precio USD", title="Bitcoin High-Low") +
 	theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold"), title=element_text(size=16), legend.text=element_text(size=16))
 
 	#set_BTC <- subset_date(BTC,fechas[i], fechas[i+1])
