@@ -19,7 +19,7 @@
 \abstractname{\\Las criptomonedas son dinero digital o virutal, que se basan en la criptograf\'ia para su funcionamiento. Estas nuevas formas de realizar transacciones estan revolucionando el mercado, dado que en principios de este a\~no, 2017, la lider en esta nueva tecnologia, \textbf{Bitcoin}. Este ten\'ia un precio de \$933.66 USD y para principios de noviembre del mismo a\~no alcanzaba \$6440.97 USD, un crecimiento del mas 600\% en unos cuantos meses. Introducir conceptos de las criptomonedas, ver como cambia el precio a trav\'es del tiempo e intentar encontrar relaci\'on entre los datos que tenemos, es el objetivo de este documento.}
 
 \section{Criptomonedas}
-	Para explicar las criptomonedas utilizaremos al Bitcoin como referencia, dado que fue esta la que empezo el moviemiento y puede decirse que cualquier otra es una modificacion o copia directa.
+Para explicar las criptomonedas utilizaremos al Bitcoin como referencia, dado que fue esta la que empezo el moviemiento y puede decirse que cualquier otra es una modificacion o copia directa.
     \\
 
 	Una versi\'on puramente electr\'onica de efectivo permitir\'ia que los pagos en l\'inea fuesen enviados directamente de un ente a otro sin tener que pasar por medio de una instituci\'on financiera. Las transacciones son validadas por una red de usuarios, que verificaran que no ocurra un doble gasto. Cuando un usuario malintencionado intenta gastar sus criptomonedas en dos destinatarios al mismo tiempo se denomina doble gasto. La miner\'ia y la cadena de bloques permiten crear un consenso en la red acerca de cu\'al de las dos transacciones es considerada v\'alida.
@@ -76,17 +76,7 @@ Un Hash es una función matemática que asigna un dato de entrada de cualquier t
     \subsubsection*{Hash rate}
     Hash rate, es la velocidad en la que realizan los cálculos matemáticos a través de la hash function en el proceso de minado.
 
-Términos usados para la medición de Hash Rate:
-\\
-
-    1 Hash \\
-    1 Kilo Hash => 1000 Hashes \\
-    1 Mega Hash => 1000 Kilo Hashes \\
-    1 Giga Hash => 1000 Mega Hashes \\
-    1 Tera Hash => 1000 Giga Hashes \\
-    1 Peta Hash => 1000 Tera Hashes \\
-
-La velocidad se miden en UNIDAD/s, ejemplo TH/s o Tera-Hashes por segundo.
+La velocidad se miden en Hashes por segundo.
 
 	\subsection*{Bitcoin}
         \subsubsection*{Historia}
@@ -173,7 +163,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     Comencemos el an\'alisis con un res\'umen de la informaci\'on que comparten todas las criptomonedas
 
 
-    \begin{table}[]
+    \begin{table}[h]
     \centering
     \caption{Resumen Bitcoin}
     \label{label1}
@@ -196,7 +186,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     COMENTARIO SOBRE LO QUE SE VE EN LA TABLA Y PREELIMINAR 
 
 
-    \begin{table}[]
+    \begin{table}[h]
     \centering
     \caption{Resumen Ethereum}
     \label{label2}
@@ -218,7 +208,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
     COMENTARIO SOBRE LO QUE SE VE EN LA TABLA Y PREELIMINAR 
 
-    \begin{table}[]
+    \begin{table}[h]
     \centering
     \caption{Resumen Bitcoin Cash}
     \label{label3}
@@ -241,7 +231,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
     \subsubsection*{Precio con el que abre y precio con el que cierra}
 
-    Haciendo primeramente un an\'alisis visual, en general no se muestra una gran diferencia entre el precio con el que se abre y con el que se cierra el día con bitcoin. La diferencia de las medias es de solo 4 dolares que cierra mas el bitcoin en promedio durante toda su vida que con lo que abre.
+    Haciendo primeramente un an\'alisis visual, en general no se muestra una gran diferencia entre el precio con el que se abre y con el que se cierra el día con bitcoin.
     \\
     
     \begin{figure}
@@ -254,7 +244,6 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
         \caption{Your caption}
     \end{figure}
 
-    Ya que apenas se pueden notar debido a que visualmente una esta sobre la otra, pensamos que graficar las diferencias nos dar\'ia una mejor visualizaci\'on de los datos:
     En realidad no se puede extrar mucha informaci\'on porque lo que se alcanza a visualizar esta encimado y no se aprecia un dato de otro. Entonces graficamos las diferencias, tal y como se muestra en la figura 2.
 
     \begin{figure}
@@ -290,9 +279,6 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \end{figure}
 
 
-
-    %[Tabla de diferencia en meses]
-
     \begin{itemize}
 
         \item En general Los precios con los que abre la moneda se ven menores comparados con los que cierra.
@@ -320,7 +306,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
         %[INSERTAR_GRAFICO_ALTO_BAJO_GLOBAL]
         %\includegraphics[width = 18cm, height = 10cm]{btc/diferencias_BTC_OpenClose_2}
 
-        \caption{Diferencias de precio en que abre y cierra btc, acercamiento 2017}
+        \caption{Precio m\'as alto y m\'as bajo btc}
     \end{figure}
 
     En un esfuerzo para ver mejor las diferencias que hay, tambi\'en graficamos las diferencias y con esto quiza encontrar alg\'un patr\'on.
@@ -366,7 +352,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
     Por curiosidad, revisamos que tan seguido el precio máximo o mínimo era durante los periodos de apertura o cierre del día para las monedas.
 
-    \begin{table}[]
+    \begin{table}[h]
     \centering
     \caption{Relaci\'on de mayor o menor precio de acuerdo al principio, mitad o final del d\'ia}
     \label{label4}
@@ -379,7 +365,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \end{tabular}
     \end{table}
 
-    \begin{table}[]
+    \begin{table}[h]
     \centering
     \caption{Relaci\'on de mayor o menor precio de acuerdo al principio, mitad o final del d\'ia}
     \label{label5}
@@ -392,7 +378,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \end{tabular}
     \end{table}
 
-    \begin{table}[]
+    \begin{table}[h]
     \centering
     \caption{Relaci\'on de mayor o menor precio de acuerdo al principio, mitad o final del d\'ia}
     \label{label6}
@@ -527,7 +513,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \\
     Pero cuando se revisa en los datos que se tienen se ve como no concuerdan:
 
-    \begin{table}[]
+    \begin{table}[h]
     \centering
     \caption{N\'umero de monedas que existen y que deber\'ian existir}
     \label{label7}
