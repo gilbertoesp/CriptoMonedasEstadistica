@@ -232,6 +232,34 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
 
     La otra moneda de la cual hablaremos muy poco es Bitcoin Cash. Esta moneda fue resultado de querer estar regido bajo diferentes reglas que Bitcoin pero comparte la misma base y ambos vienen del mismo Blockchain.
 
+\subsubsection*{Independencia}
+Se realizaron pruebas de independencia $\chi^{2}$.
+\\
+
+data:  ETH-High y CASH-High\\
+X-squared = 11448, df = 11342, p-value = 0.2401
+\\
+
+data:  CASH-High y BTC-High\\
+X-squared = 11448, df = 11342, p-value = 0.2401
+\\
+
+data:	BTC-High y ETH-High\\
+X-squared = 11556, df = 11449, p-value = 0.2391
+\\
+
+data:  ETH-Low y CASH-Low\\
+X-squared = 11556, df = 11449, p-value = 0.2391
+\\
+
+data:  CASH-Low y BTC-Low\\
+X-squared = 11556, df = 11449, p-value = 0.2391
+\\
+
+data:  BTC-Low y ETH-Low\\
+X-squared = 11556, df = 11449, p-value = 0.2391
+
+En estas sencillas pruebas notamos como p-value se mantiene por debajo del 0.25 pero siempre encima del 0.05 podemos decir que los precios son independientes. Este conocimiento nos dice que cada moneda se mantiene por si misma y si llegara un hipotetico caso en el que Bitcoin se desploma, las demas monedas podr\'ian sobrevivir de forma paralela.
 
     \subsubsection*{Precio con el que abre y precio con el que cierra}
 
@@ -545,6 +573,7 @@ Un software que se comunica con la red para poder realizar operaciones de env\'i
     \\
     La prueba pearson de correlaci\'on arroja como resultado un p-valor de $2.2e-16$, un intervalo de confianza de $(0.9988955, 0.9990446)$ con un nivel de confianza del 95\%. Ya que el p-valor obtenido es menor a 0.05, se puede concluir que la correlaci\'on entre los dos datos es significante.
     \\
+
 
 
     \subsubsection*{Blockchain}
